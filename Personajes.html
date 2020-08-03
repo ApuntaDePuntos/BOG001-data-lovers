@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rick and Morty - Personajes</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content= "width=device-width, initial-scale=1 , maximun-scale=1.0"> 
+  <title>Rick and Morty - Personajes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <main class="container">
+  <main class="contenedorP">
+    <section class ="heroP">
+    <img src="personajes.jpg" class="imagenTop"> <br>
+  </section>
+  <section class="espacioFiltro">
+    <div id="alive" class="alive"> Alive </div> 
+    <div class="az" id= "sortButton">A -Z</div> 
+    <input id ="toSearch" class="search" type="text" placeholder="Search?">
+    <img type="button" class="magnifyingGlass" id="searchButton" src="lupa.png">
+  </section> 
 
-  <img src="personajes.jpg" class="imagenTop"> <br>
+  <section class="grid" id= 'resultadosP'></section>
+  <section class="grid" id="charactersZone"></section>
+
+
+</section>
+<section class= "menuButtons1">
+<img type = "button" class="pngButtons" id=toCharacters src="botonPersonajes.png">
+<img type= "button" class="pngButtons" id=toWorlds src="botonMundos.png">
+<img type="button" class="pngButtons" id=toSeasons src="botonTemporadas.png">
+</section>
+
+  <footer class="footer">
+    Derechos Reservados | Natalia Rodriguez &copy; 
+  </footer>
+
+  <section  class="container"  id="pruebaTarjeta"> </section>
+  
+
+    <script src="main.js" type="module"></script>
+
     
-  <div class="titulo"> <center> Rick and Morty - Personajes! </center> </div>
-    <br>
-    <br>
-
-<div class= "grid" id="charactersZone"></div>
-
-<div id="pruebaTarjeta"></div>
-
-
-
-  <div id="root"></div>
-  <script src="main.js" type="module"></script>
-
-   </main>  
+  </main>
 </body>
+
 </html>

@@ -1,34 +1,288 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Patrick Hand', cursive;  
-    word-break: break-all;
-}
-/* .container{
-    display: flex;
-    height: 100vh;
-    font-size: 2rem;
-  } */
-  .contenedorUno {
-    margin: 0;
-    padding: 0;
-    background-color: #BBDA94;
-    width: 100%;
-}
-.titulo {
-    align-items: center;
-    font-size: 4em;
+:root {
+  --main-color: rgb(183, 221, 136);
+  --secondary-color: rgb(252, 117, 27);
+  --secondary-buttons: rgb(253, 159, 97);
+  --season-color:rgb(116, 209, 197);
+  --season-buttons: #30b197;
+  --world-color:rgb(182, 69, 72);
+  --world-buttons: rgb(243, 148, 148);
+  --container-padding: 8%;
+  --hero-border: 0 0 20% 20%;
+  
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;  
+  word-break: break-all;
+}
 
-  .imagenUno {
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
+.contenedorUno {
+    background-color: var(--main-color);
   }
 
-  .grid {
-    background-color: #FC9B57;
+.hero {
+  border-radius: var(--hero-border);
+  overflow: hidden;
+  background: var(--main-color);
+
+}
+
+.imagenTop {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  align-items: center;
+}
+
+
+/*
+.imagenTop {
+  border-bottom-left-radius: 30px;
+  -moz-border-radius-bottomleft: 30px;
+  -webkit-border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -moz-border-radius-bottomright: 30px;
+  -webkit-border-bottom-right-radius: 30px;
+}*/
+
+.titulo {
+  align-items: center;
+  font-size: 4em;
+}
+
+.tituloPng {
+  display: block;
+  margin: auto;
+  max-width: 60%;
+}
+
+.Sinopsis {
+  padding: 0 var(--container-padding);
+  font-size: 1em;
+  word-break: break-word;
+} 
+
+.menuButtons{
+  margin-top: 20px;
+  padding: 2% var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.pngButtons{
+  height: auto;
+  width: 25%;
+}
+
+.footer {
+  margin-top: 40px;
+  padding: 0.5em;
+  text-align: center;
+  background-color: silver;
+}
+
+/* PAGINA PERSONAJES*/
+
+.contenedorP {
+    background-color: var(--secondary-color);
+  }
+
+  .heroP {
+    border-radius: var(--hero-border);
+    overflow: hidden;
+    background: var(--secondary-color);
+  
+  }
+
+  .espacioTitulo {
+    padding: 30px 30px  10px 200px ;
+    font-size: 1em;
+    background-color: var(--secondary-color);
+  } 
+.espacioFiltro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+
+
+}
+
+.magnifyingGlass{
+width: 50px;
+}
+
+.grid {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: auto;
+  justify-content: space-around;
+  
+}
+
+.alive {
+  background-color:  rgb(255, 102, 31);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25px;
+  width: 75px; 
+  margin : 10px;
+  font-size: 10px;
+  border-radius: 1em 0 0 1em ;
+  box-sizing: border-box; 
+}
+
+.az {
+  background-color: rgb(255, 102, 31);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25px;
+  width: 75px; 
+  margin: 10px ;
+  font-size: 10px;
+  box-sizing: border-box; 
+}
+
+.search {
+  background-color: rgb(255, 102, 31);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 25px;
+  width: 75px; 
+  margin: 10px ;
+  font-size: 10px;
+  border-radius: 0 1em 1em 0 ;
+  box-sizing: border-box; 
+  border: 0;
+}
+
+.personajes1 {
+    align-items: center;
+    background-color: var(--secondary-buttons);
+    box-shadow: 0 4px 10px -2px rgb(156, 66, 5);
+    color: white;
+    display: flex;
+    height: 200px;
+    width: 200px;  
+    justify-content: center;
+    border-radius: 1em;
+    padding: 1em 0  0 1em ;
+    box-sizing: border-box; 
+    margin: 1em;
+    border: 0;
+    flex-direction: column;
+    transition: box-shadow .3s ease;
+   
+}
+
+.personajes1:hover {
+  box-shadow: 0 2px 2px -2px rgb(87, 38, 6);
+}
+
+.nombres {
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    word-break: break-word;
+    text-size-adjust: auto;
+}
+
+.image {
+    margin-top: 8px; 
+    width: 120px ; 
+    border-radius: 100px 100px 50% 50% / 100px 100px 50% 50%;
+    text-size-adjust: auto;  
+    justify-content: center;
+    margin: auto;
+}
+
+
+/* VENTANA MODAL*/ 
+
+.container{
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  opacity: 30;
+  transition: all 600ms; 
+}
+
+
+.container:target .tarjeta{
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg) translate(-50%, -50%);
+  visibility: visible;
+}
+
+
+.tarjeta{
+  background-color: var(--secondary-color);
+  align-items: center;
+  color : white; 
+  width: 100%;
+  max-width: 300px;
+  height: 500px;
+  justify-content: center;
+  border-radius: 1em;
+  box-sizing: border-box; 
+  margin: 1px;
+  border: 0;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  z-index: 299;
+  /*visibility: hidden;
+  top: -80%;
+  left: -80%;
+  transform: rotate(90deg) translate(-150%, 230%);
+  transition: all 600ms; */
+}
+
+.tarjetaImg {
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px; 
+  width: 220px ; 
+  border-radius: 1em;
+  border: 10px #61b3a8 solid;
+}
+.modal_cerrar {
+  font-size: 20px;
+  color: #61b3a8
+}
+
+
+/* PAGINA MUNDOS*/
+
+.contedorW{
+    background-color: var(--world-color);
+  }
+
+  .heroW {
+    border-radius: var(--hero-border);
+    overflow: hidden;
+    background-color: var(--world-color);
+  }
+  .gridW {
+    background-color: var(--world-color);
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
@@ -36,57 +290,127 @@
     justify-content: space-around;
     
   }
-
-.personajes1 {
+  .personajesW {
     align-items: center;
-    background-color: #F48134;
-    box-shadow: #D8702A;
-    color: white;
+    background-color: var(--world-buttons);
+    box-shadow: 0 4px 10px -2px  hsl(12, 86%, 27%);
+    color: rgba(107, 10, 42, 0.973);
     display: flex;
-    height: 150px;
-    width: 150px;  
+    height: 200px;
+    width:200px;  
     justify-content: center;
-    border-radius: 2em;
-    padding-left: 0em;
-    padding-right: 0em;
-    padding-top: 1em;
+    border-radius: 50% 50%;
+    padding: 1em 0  0 1em ;
     box-sizing: border-box; 
     margin: 1em;
-    font-size: 1em;
     border: 0;
-    flex-direction: column
-}
-.nombres {
-    word-break: break-word;
-}
-
-.image {
-    width: 70% ; 
-    border-radius: 1em;
-
-}
-.root {
-    background-color: rgb(159, 190, 115);
-
+    flex-direction: column;
+    transition: box-shadow .3s ease;
+   
 }
 
-.Sinopsis {
-
-    font-size: 2em;
+.personajesW:hover {
+  box-shadow: 0 2px 2px -2px rgb(9, 65, 150);
 }
 
-/* Computador  */
-@media   (min-width: 780px) and (max-width: 1024px){};
 
-/* Tablet */
-@media   (min-width: 480px) and (max-width: 780px) {};
+
+/* PAGINA TEMPORADAS */
+
+.contenedorS{
+    background-color: var(--season-color);
+  }
+
+  .heroS {
+    border-radius: var(--hero-border);
+    overflow: hidden;
+    background-color: var(--season-color);
+  }
+
+  .menuButtons1{
+    padding: 2% var(--container-padding);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+
+  .gridS {
+    background-color: var(--season-color);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    justify-content: space-around;
+    
+  }
+  
+.personajesS {
+      background-color: rgb(141, 230, 218);
+      box-shadow: 0 4px 10px -2px var(--season-buttons);
+      color: rgb(12, 95, 134);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width:300px;  
+      border-radius: 1em;
+      padding: 10px ;
+      box-sizing: border-box; 
+      margin: 1em;
+      border: 0;
+      transition: box-shadow .3s ease;
+     
+}
+  
+.personajesS:hover {
+    box-shadow: 0 2px 2px -2px rgb(9, 65, 150);
+  }
+.unoS .ChapterNameS{
+  justify-content: space-between;
+  
+ /* flex-direction: wrap;*/
+
+}
+.imageS {
+     /* margin-top: 8px; */
+      width: 110px ;
+      border-radius:  1em;
+      flex-direction: wrap;
+      padding-right: 10px;
+     /* margin: auto;*/
+  }
+
 
 /* Celular */
-@media   (max-width: 480px){
+@media  screen and (min-width: 480px){
+  .imagenTop {
+    width: 100vw;
+  }
 
-    .personajes1 {
+  .Sinopsis {
+    font-size: 2em;
+  }
 
-        background-color: darkorange;
-        border-radius: 2em;
-    }
-};
+  .pngButtons {
+    width: 20%;
+  }
+  .alive {
+    font-size: 15px;
+    height: 50px;
+    width: 150px; 
+  }
+
+  .az {
+    font-size: 15px;
+    height: 50px;
+    width: 150px; 
+  }
+  .search { 
+  font-size: 15px;
+  height: 50px;
+  width: 150px; 
+  }
+}

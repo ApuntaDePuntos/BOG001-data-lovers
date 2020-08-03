@@ -1,5 +1,4 @@
-import { filtrar , alive  } from './data.js';	
-
+// import { filtrar , alive  } from './data.js';	
 
 import data from './data/rickandmorty/rickandmorty.js';
 const datos = data.results;

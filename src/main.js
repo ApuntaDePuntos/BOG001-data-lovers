@@ -28,9 +28,10 @@ if (window.location.pathname === "/src/Personajes.html") {
 
     characterCards.innerHTML = information;
     document.getElementById("pruebaTarjeta").style.visibility = "visible";
-    document.getElementById("cerrarModal").addEventListener("click", function () { 
-      document.getElementById("pruebaTarjeta").style.visibility = "hidden"; })
-    
+    document.getElementById("cerrarModal").addEventListener("click", function () {
+      document.getElementById("pruebaTarjeta").style.visibility = "hidden";
+    })
+
   };
 
   function show(arrayPersonajes) {
@@ -41,7 +42,7 @@ if (window.location.pathname === "/src/Personajes.html") {
       <p data-personajes="${i}" class= "nombres" >${arrayPersonajes[i].name.slice(0, 17)} </p>  </div>`
     };
 
-    let characterButtons = document.getElementById("charactersZone");
+    const characterButtons = document.getElementById("charactersZone");
 
     characterButtons.innerHTML = names;
 
@@ -84,19 +85,25 @@ if (window.location.pathname === "/src/Personajes.html") {
   sortButton.addEventListener("click", (e) => az(personajes));
 
   // Busqueda de muñecos 
-  const lupa = document.getElementById("searchButton");
+  const lupaBoton = document.getElementById("searchButton");
+  const toSearch = document.getElementById('toSearch')
+  let prueba = document.getElementById('resultadosP')
 
-  function searching( arrayPersonajes) {
-console.log(arrayPersonajes)
-    let word = document.getElementById("toSearch").value;
-    let busqueda = arrayPersonajes.find(personaje => personaje.name.toLowerCase() === word.toLowerCase());
-    let arrayBusqueda = Array.from(busqueda);
-    console.log(arrayBusqueda)
-    show(arrayBusqueda);
-   
-  };
+  const filtrar = () => {
+    //prueba.innerHTML = ''
+    let texto = toSearch.value.toLowerCase();
+    for (let personaje of personajes) {
+      let nombre = personaje.name.toLowerCase();
+      if (nombre.indexOf(texto) !== -1) {
+        console.log(nombre)
+        prueba.innerHTML += nombre
+      }
+    } if (prueba.innerHTML === '') { prueba.innerHTML += 'Personaje no existe...' }
+  }
 
-  lupa.addEventListener("click", () => searching(personajes));
+  lupaBoton.addEventListener("click", filtrar);
+  //toSearch.addEventListener('keyup',filtrar);
+
 
   // esta } es cierre de if de la ventana
 };
@@ -130,21 +137,21 @@ if (window.location.pathname === "/src/Mundo.html") {
 if (window.location.pathname === "/src/Temporada.html") {
 
   // Para conseguir los Capitulos 
-/*
-  let chapters = [];
-
-  for (let i = 0; i < personajes.length; i++) {
-    // saber si en world ya existe ese nombre del capitulos 
-    let nombrecapitulos = `<div class= "personajesS" > <div class="unoS"> <img class="imageS" src="season1.jpg"> </div> <div class="ChapterNameS"><p> Episode: ${personajes[i].episode[1]}</p></div></div>`
-
-    if (!chapters.includes(nombrecapitulos)) { chapters.push(nombrecapitulos) }
-
-  };
-  let seasonButtons = document.getElementById("seasonZone");
-  seasonButtons.innerHTML = chapters; */
+  /*
+    let chapters = [];
+  
+    for (let i = 0; i < personajes.length; i++) {
+      // saber si en world ya existe ese nombre del capitulos 
+      let nombrecapitulos = `<div class= "personajesS" > <div class="unoS"> <img class="imageS" src="season1.jpg"> </div> <div class="ChapterNameS"><p> Episode: ${personajes[i].episode[1]}</p></div></div>`
+  
+      if (!chapters.includes(nombrecapitulos)) { chapters.push(nombrecapitulos) }
+  
+    };
+    let seasonButtons = document.getElementById("seasonZone");
+    seasonButtons.innerHTML = chapters; */
 
   // Otra forma de conseguir episodios 
-  
+
   let results = [];
   const fetchEpisodes = () => {
     let url = `https://rickandmortyapi.com/api/episode/`;
@@ -155,18 +162,19 @@ if (window.location.pathname === "/src/Temporada.html") {
       .then((data) => {
         results['results'] = data.results
       })
-      fetchEpisodes();
-     console.log("hola mundo")
+    fetchEpisodes();
+    
+    console.log("hola mundo")
     let episodioInfo = [];
     for (let i = 0; i < results.length; i++) {
       episodioInfo += ` <p class= "nombres" >${results[i].name} </p>`
     }
     let seasonButtons = document.getElementById("seasonZone");
     seasonButtons.innerHTML = results;
-    
+
   };
 
-  
+
 
   // esta } es cierre de if de la ventana
 };

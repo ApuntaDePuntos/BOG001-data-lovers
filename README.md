@@ -48,23 +48,7 @@ Una vez que definas tu área de interés, buscar entender quién es tu usuario
 y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
 le ayude a interactuar y entender mejor esos datos.
 
-Estos son datos que te proponemos:
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
 
 ## 3. Objetivos de aprendizaje
 
@@ -161,7 +145,7 @@ iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
 `README.md`.
 
 #### Prototipo de alta fidelidad
-
+run
 Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
 _User Interface_). Para eso debes aprender a utilizar alguna herramienta de
 diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es

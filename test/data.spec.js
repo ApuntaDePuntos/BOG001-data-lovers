@@ -1,4 +1,4 @@
-import { filtrar , alive } from '../src/data.js';
+import { status ,  buscarPorNombre , compare } from '../src/data.js';
 
 const dataPrueba = [
     {
@@ -65,39 +65,34 @@ const dataPrueba = [
             "url": "https://rickandmortyapi.com/api/location/20"
         },
     } ]
-    let pruebaRick = [ {
-      "id": 1,
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-          "name": "Earth (C-137)",
-          "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "location": {
-          "name": "Earth (Replacement Dimension)",
-          "url": "https://rickandmortyapi.com/api/location/20"
-      },
-  }]
+    
+    let pruebaRick = "[{\"gender\": \"Male\", \"id\": 1, \"location\": {\"name\": \"Earth (Replacement Dimension)\", \"url\": \"https://rickandmortyapi.com/api/location/20\"}, \"name\": \"Rick Sanchez\", \"origin\": {\"name\": \"Earth (C-137)\", \"url\": \"https://rickandmortyapi.com/api/location/1\"}, \"species\": \"Human\", \"status\": \"Alive\", \"type\": \"\"}]"
 
     //Nombres Beth Smith, Rick Sanchez
 describe('This function allows to filtering chracters by name', () => {
   it.only('is a function', () => {
-    expect(typeof filtrar).toBe('function');
+    expect(typeof buscarPorNombre).toBe('function');
   });
 
-  it.only('returns `rick Sanchez`', () => {
-    expect(filtrar(dataPrueba,'rick')).toHaveProperty('pruebaRick');
+  it.only('returns Rick Sanchez', () => {
+    expect(buscarPorNombre(dataPrueba,'rick')).toBe(pruebaRick);
   });
 });
 
 
-describe('anotherExample', () => {
+describe('This function shows the characters that r alive', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof status).toBe('function');
   });
+    const characterStatus = [
+      {
+          "id": 1,
+          "name": "Rick Sanchez",
+          "status": "Alive"
+        }, {
+          "id": 2,
+          "name": "Summer Smith",
+          "status": "Death"}]
 
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
@@ -105,9 +100,9 @@ describe('anotherExample', () => {
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('this function compares which element is bigger', () => {
+  it ('is a function', () => {
+    expect(typeof compare).toBe('function');
   });
 
   it('returns `anotherExample`', () => {

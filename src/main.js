@@ -1,13 +1,12 @@
-// import { filtrar , alive  } from './data.js';	
-
 import data from './data/rickandmorty/rickandmorty.js';
-const datos = data.results;
+import { buscarPorNombre } from './data.js'
 
+const datos = data.results;
 let personajes = datos.slice(0, 99);
 
 // PAGINA DE PERSONAJES
 console.log(window.location.pathname)
-if (window.location.pathname === "/src/Personajes.html") {
+if (window.location.pathname === "/src/Personajes.html" || window.location.pathname === "/Personajes" ) {
 
   function popUp(e, arrayPersonajes) {
     const indicator = e.target.dataset.personajes;
@@ -88,19 +87,13 @@ if (window.location.pathname === "/src/Personajes.html") {
   const toSearch = document.getElementById('toSearch')
   let prueba = document.getElementById('resultadosP')
 
-  const filtrar = () => {
-    //prueba.innerHTML = ''
-    let texto = toSearch.value.toLowerCase();
-    for (let personaje of personajes) {
-      let nombre = personaje.name.toLowerCase();
-      if (nombre.indexOf(texto) !== -1) {
-        console.log(nombre)
-        prueba.innerHTML += nombre
-      }
-    } if (prueba.innerHTML === '') { prueba.innerHTML += 'Personaje no existe...' }
-  }
+  lupaBoton.addEventListener("click", () => {
+    let textoBusqueda = toSearch.value.toLowerCase();
+    const resultadoBusqueda = buscarPorNombre(personajes, textoBusqueda)
+    show(resultadoBusqueda)
+    
 
-  lupaBoton.addEventListener("click", filtrar);
+  });
   //toSearch.addEventListener('keyup',filtrar);
 
 
@@ -108,8 +101,7 @@ if (window.location.pathname === "/src/Personajes.html") {
 };
 
 //PARA PAGINA MUNDOS 
-
-if (window.location.pathname === "/src/Mundo.html") {
+if (window.location.pathname === "/src/Mundo.html" || window.location.pathname === "//Mundo") {
 
   // Para conseguir el nombre de los mundos 
 
@@ -133,10 +125,9 @@ if (window.location.pathname === "/src/Mundo.html") {
 
 //PARA PAGINA DE TEMPORADAS
 
-if (window.location.pathname === "/src/Temporada.html") {
-
+if (window.location.pathname === "/src/Temporada.html" || window.location.pathname === "/Temporada") {
   // Para conseguir los Capitulos 
-  /*
+  
     let chapters = [];
   
     for (let i = 0; i < personajes.length; i++) {
@@ -147,10 +138,10 @@ if (window.location.pathname === "/src/Temporada.html") {
   
     };
     let seasonButtons = document.getElementById("seasonZone");
-    seasonButtons.innerHTML = chapters; */
+    seasonButtons.innerHTML = chapters; 
 
   // Otra forma de conseguir episodios 
-
+/*
   let results = [];
   const fetchEpisodes = () => {
     let url = `https://rickandmortyapi.com/api/episode/`;
@@ -170,17 +161,12 @@ if (window.location.pathname === "/src/Temporada.html") {
     }
     let seasonButtons = document.getElementById("seasonZone");
     seasonButtons.innerHTML = results;
-
-  };
-
-
-
+    
+  }; */
   // esta } es cierre de if de la ventana
 };
 
-
 // Botones paginas 
-
 function turnPageC() {
   window.location.href = 'Personajes.html';
 }

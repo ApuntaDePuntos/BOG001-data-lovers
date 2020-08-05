@@ -18,8 +18,6 @@ hacerlo es creando _interfaces_ y _visualizaciones_.
 
 para comenzar con este proyecto analizamos que tipo de personas veian la serie, creamos 3 tipos de perfiles; cada uno con sus propias caracteristicas de estos usuarios, junto con cosas en comun entre los perfiles y que tipo de informacion les gustaria encontrar en esta pagina. 
 
-<p align="center">
-  <img src="/ImagenesREADme.Usuarios.jpg" width="350" title="hover text"> </p>
 
   ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Usuarios.jpg)
 
@@ -39,14 +37,14 @@ para comenzar con este proyecto analizamos que tipo de personas veian la serie, 
 
   Al tener este completo pasamos a nuestra version de alta fidelidad del proyecto a crear. Definimos cada pagina, el contenido, las imagenes y la estetica exacta del proyecto, junto con la navegacion del usuario dentro de la misma. 
 
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/sketch%20Ai%201.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%202.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%203.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%204.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%205.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20%20Ai%2006.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%206.png)
-  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%207.png)
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/sketch%20Ai%201.png" width="250" title="hover text"> </p>
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%202.png" width="250" title="hover text"> </p> 
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%203.png" width="250" title="hover text"> </p> 
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%204.png" width="250" title="hover text"> </p> 
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%205.png" width="250" title="hover text"> </p>
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20%20Ai%2006.png" width="250" title="hover text"> </p> 
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%206.png" width="250" title="hover text"> </p> 
+<p> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%207.png" width="250" title="hover text"> </p> 
 
 
 Al tener esta guia clara, comenzamos con el dise;o de la pagina, para esto era vital el entender de que datos estaba compuesta toda la Data entregada, como estaba estructura y como debiamos acceder a la misma. Por consiguiente, empleamos distintas funciones que nos entregaran la informacion requerida dentro de las historias. Manejamos funciones independientes e hicimos un manejo dinamico del DOM para poder actualizar constantemente la pagina de la informacion requerida. Trabajamos en el dise;o responsive de la pagina y en mantener la estetica lo mas similar a nuestro sketch. 

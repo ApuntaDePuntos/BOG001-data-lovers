@@ -45,7 +45,10 @@ Al tener esta guia clara, comenzamos con el dise;o de la pagina, para esto era v
 
 Para poder finalizar con este trabajo de esta de la siguiente manera: 
 
-***AGREGAR IMAGENES FINALES DE LA PAGINA!***
+***IMAGENES FINALES DE LA PAGINA!***
+
+<img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250">
+<img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250">
 
 
 ### HTML y CSS

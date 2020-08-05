@@ -46,8 +46,8 @@ Para poder finalizar con este trabajo de esta de la siguiente manera:
 
 ***IMAGENES FINALES DE LA PAGINA!***
 
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/IndexF.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/PF.png" width="250">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/PF1.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/PF2.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/W.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/W1.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/EP.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/EP%201.png" width="250">
+<img src="" width="250"><img src="" width="250">
+<img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250">
 
 
 ### HTML y CSS

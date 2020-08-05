@@ -14,34 +14,47 @@ los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
 hacerlo es creando _interfaces_ y _visualizaciones_.
 
 
-## 2. Resumen del proyecto
+##  El proyecto
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+para comenzar con este proyecto analizamos que tipo de personas veian la serie, creamos 3 tipos de perfiles; cada uno con sus propias caracteristicas de estos usuarios, junto con cosas en comun entre los perfiles y que tipo de informacion les gustaria encontrar en esta pagina. 
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+<p align="center">
+  <img src="/ImagenesREADme.Usuarios.jpg" width="350" title="hover text"> </p>
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Usuarios.jpg)
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+  Al tener estos perfiles claros, junto con sus gustos e intereses fue mas facil desarrollar cada historia de usuario, definimos que informacion debia tener la pagina y dividimos cada esto en criterios de aceptacion dentro de las historias de usuarios. El total de Historias fue de 6, cada una con sus tareas fijas. Comenzaba con :
+      "Yo como persona sin conexión a la serie de Rick and Morty quiero una sinopsis (max 10 renglones) para saber sobre que trata la serie para decidir si la veo o no" 
+
+  en el que nos enfocamos en crear toda la parte de responsive de la pagina. Y pasando luego por:
+      "Como usuario nuevo quiero poder listar los personajes ver su nombre, para entenderla mejor"
+      "Yo como usuario frecuente quiero saber mas información acerca de los personajes, datos mas específicos que me permitan ubicarme y entender un poco mas a fondo sobre ellos"
+      "Yo como usuario apasionado quiero ( listado y otra en detalle y si queremos filtros) conocer los mundos que existen en la serie y quienes los habitan para hacer mi propio análisis del universo."
+      "Como usuario recurrente quiero conocer los episodios por temporadas para tener claro cuando pasaron ciertos sucesos que son relevantes"
+      "Yo como seguidor de la serie quiero tener una señal que me indique el estado de vida de personaje durante la serie para estar al día."
 
 
+  Con esto pudimos comenzar el primer sketch del proyecto, en este definimos el arbol de navegacion de la pagina //cuantas ventanas tendriamos // y como mostrariamos la informacion: 
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%201.jpg)
 
-## 3. Objetivos de aprendizaje
+  Al tener este completo pasamos a nuestra version de alta fidelidad del proyecto a crear. Definimos cada pagina, el contenido, las imagenes y la estetica exacta del proyecto, junto con la navegacion del usuario dentro de la misma. 
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/sketch%20Ai%201.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%202.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%203.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%204.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%205.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20%20Ai%2006.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%206.png)
+  ![alt tag](https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%207.png)
+
+
+Al tener esta guia clara, comenzamos con el dise;o de la pagina, para esto era vital el entender de que datos estaba compuesta toda la Data entregada, como estaba estructura y como debiamos acceder a la misma. Por consiguiente, empleamos distintas funciones que nos entregaran la informacion requerida dentro de las historias. Manejamos funciones independientes e hicimos un manejo dinamico del DOM para poder actualizar constantemente la pagina de la informacion requerida. Trabajamos en el dise;o responsive de la pagina y en mantener la estetica lo mas similar a nuestro sketch. 
+
+Para poder finalizar con este trabajo de esta de la siguiente manera: 
+
+***AGREGAR IMAGENES FINALES DE LA PAGINA!***
+
 
 ### HTML y CSS
 
@@ -95,25 +108,3 @@ usuario necesita.
 
 
 
-
-## 9. Checklist
-
-* [x] Usa VanillaJS.
-* [x] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements,   functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin o Figma en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.

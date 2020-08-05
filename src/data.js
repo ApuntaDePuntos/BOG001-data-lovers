@@ -5,19 +5,25 @@ export const name = () => {
 };
 
 export const status = function alive (arrayPersonajes) {
-
   let aliveCharacters = arrayPersonajes.filter(character => character.status == "Alive");
   return (aliveCharacters);
 };
 
+function compare(a, b) {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  else { return 0 }
+}
 
-export const worlds = function newWorlds(arrayPersonajes) {
-  let world = [];
-  for (let i = 0; i < arrayPersonajes.length; i++) {
-    let nombreplaneta = `<div class= "personajesW" <img src="mundos.jpg"> <p> ${arrayPersonajes[i].origin.name} </p> </div>`
-    if (!world.includes(nombreplaneta)) { world.push(nombreplaneta) }
-  } 
-};
+export const alphabetic = function az(arrayPersonajes) {
+  let alphabeticalOrder = arrayPersonajes.sort(compare);
+  return (alphabeticalOrder);
+}
+
 /*
 export const filtrar = (arrayPersonajes, toSearch) => {
   let texto = toSearch.toLowerCase();

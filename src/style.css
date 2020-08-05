@@ -369,7 +369,7 @@ width: 50px;
     box-shadow: 0 2px 2px -2px rgb(9, 65, 150);
   }
 .unoS .ChapterNameS{
-  justify-content: space-between;
+  justify-content: flex-start;
   
  /* flex-direction: wrap;*/
 

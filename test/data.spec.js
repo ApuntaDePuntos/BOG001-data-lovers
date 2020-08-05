@@ -1,4 +1,4 @@
-import { status ,  buscarPorNombre , compare } from '../src/data.js';
+import { status ,  buscarPorNombre , alphabetic } from '../src/data.js';
 
 const dataPrueba = [
     {
@@ -20,7 +20,7 @@ const dataPrueba = [
     {
         "id": 2,
         "name": "Morty Smith",
-        "status": "Alive",
+        "status": "Death",
         "species": "Human",
         "type": "",
         "gender": "Male",
@@ -52,7 +52,7 @@ const dataPrueba = [
     {
         "id": 4,
         "name": "Beth Smith",
-        "status": "Alive",
+        "status": "Death",
         "species": "Human",
         "type": "",
         "gender": "Female",
@@ -66,16 +66,129 @@ const dataPrueba = [
         },
     } ]
     
-    let pruebaRick = "[{\"gender\": \"Male\", \"id\": 1, \"location\": {\"name\": \"Earth (Replacement Dimension)\", \"url\": \"https://rickandmortyapi.com/api/location/20\"}, \"name\": \"Rick Sanchez\", \"origin\": {\"name\": \"Earth (C-137)\", \"url\": \"https://rickandmortyapi.com/api/location/1\"}, \"species\": \"Human\", \"status\": \"Alive\", \"type\": \"\"}]"
+    let pruebaRick = [{
+          "id": 1,
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+          "origin": {
+              "name": "Earth (C-137)",
+              "url": "https://rickandmortyapi.com/api/location/1"
+          },
+          "location": {
+              "name": "Earth (Replacement Dimension)",
+              "url": "https://rickandmortyapi.com/api/location/20"
+          },
+      }]
 
-    //Nombres Beth Smith, Rick Sanchez
+      let pruebaAlive = [{
+        "id": 1,
+        "name": "Rick Sanchez",
+        "status": "Alive",
+        "species": "Human",
+        "type": "",
+        "gender": "Male",
+        "origin": {
+            "name": "Earth (C-137)",
+            "url": "https://rickandmortyapi.com/api/location/1"
+        },
+        "location": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+    },{
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Female",
+      "origin": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+      },
+  },
+      ]
+
+      let pruebaSort =[{
+        "id": 4,
+        "name": "Beth Smith",
+        "status": "Death",
+        "species": "Human",
+        "type": "",
+        "gender": "Female",
+        "origin": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "location": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+    },
+  {
+      "id": 2,
+      "name": "Morty Smith",
+      "status": "Death",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+          "name": "Earth (C-137)",
+          "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+      },
+  },
+  {
+    "id": 1,
+    "name": "Rick Sanchez",
+    "status": "Alive",
+    "species": "Human",
+    "type": "",
+    "gender": "Male",
+    "origin": {
+        "name": "Earth (C-137)",
+        "url": "https://rickandmortyapi.com/api/location/1"
+    },
+    "location": {
+        "name": "Earth (Replacement Dimension)",
+        "url": "https://rickandmortyapi.com/api/location/20"
+    },
+},
+  {
+      "id": 3,
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Female",
+      "origin": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "location": {
+          "name": "Earth (Replacement Dimension)",
+          "url": "https://rickandmortyapi.com/api/location/20"
+      },
+  }]
+
+
 describe('This function allows to filtering chracters by name', () => {
-  it.only('is a function', () => {
+  it('is a function', () => {
     expect(typeof buscarPorNombre).toBe('function');
   });
 
-  it.only('returns Rick Sanchez', () => {
-    expect(buscarPorNombre(dataPrueba,'rick')).toBe(pruebaRick);
+  it('returns Rick Sanchez', () => {
+    expect(buscarPorNombre(dataPrueba,'rick')).toEqual(pruebaRick);
   });
 });
 
@@ -84,50 +197,20 @@ describe('This function shows the characters that r alive', () => {
   it('is a function', () => {
     expect(typeof status).toBe('function');
   });
-    const characterStatus = [
-      {
-          "id": 1,
-          "name": "Rick Sanchez",
-          "status": "Alive"
-        }, {
-          "id": 2,
-          "name": "Summer Smith",
-          "status": "Death"}]
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns Rick and Summer', () => {
+    expect(status(dataPrueba)).toEqual(pruebaAlive);
   });
 });
 
 
-describe('this function compares which element is bigger', () => {
-  it ('is a function', () => {
-    expect(typeof compare).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
-
-describe('anotherExample', () => {
+describe('this function compares the characters, then organize them in a alphabetical order', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof alphabetic).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns in alphabetic order Beth Morty Rick Summer ', () => {
+    expect(alphabetic(dataPrueba)).toEqual(pruebaSort);
   });
 });
+
+

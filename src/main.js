@@ -6,7 +6,7 @@ let personajes = datos.slice(0, 99);
 
 // PAGINA DE PERSONAJES
 console.log(window.location.pathname)
-if (window.location.pathname === "/src/Personajes.html" || window.location.pathname === "/Personajes" ) {
+if (window.location.pathname === "/src/Personajes.html" || window.location.pathname === "/Personajes") {
 
   function popUp(e, arrayPersonajes) {
     const indicator = e.target.dataset.personajes;
@@ -65,7 +65,7 @@ if (window.location.pathname === "/src/Personajes.html" || window.location.pathn
 
   // Metodo SORT();
 
-  function comparar(a, b) {
+  function compare(a, b) {
     if (a.name > b.name) {
       return 1;
     }
@@ -76,7 +76,7 @@ if (window.location.pathname === "/src/Personajes.html" || window.location.pathn
   }
 
   function az(arrayPersonajes) {
-    let alphabeticalOrder = arrayPersonajes.sort(comparar);
+    let alphabeticalOrder = arrayPersonajes.sort(compare);
     show(alphabeticalOrder);
   }
   const sortButton = document.getElementById("sortButton")
@@ -91,7 +91,7 @@ if (window.location.pathname === "/src/Personajes.html" || window.location.pathn
     let textoBusqueda = toSearch.value.toLowerCase();
     const resultadoBusqueda = buscarPorNombre(personajes, textoBusqueda)
     show(resultadoBusqueda)
-    
+
 
   });
   //toSearch.addEventListener('keyup',filtrar);
@@ -105,13 +105,13 @@ if (window.location.pathname === "/src/Mundo.html" || window.location.pathname =
 
   // Para conseguir el nombre de los mundos 
 
-  function newWorlds(arrayPersonajes) {
+  function newWorlds(worldArray) {
     let world = [];
-    for (let i = 0; i < arrayPersonajes.length; i++) {
+    for (let i = 0; i < worldArray.length; i++) {
       // saber si en world ya existe ese nombre del planeta . poner en el HTML 
-      let nombreplaneta = `<div class= "personajesW" <img src="mundos.jpg"> <p> ${arrayPersonajes[i].origin.name} </p> </div>`
+      let wordName = `<div class= "personajesW" <img src="mundos.jpg"> <p> ${worldArray[i].origin.name} </p> </div>`
 
-      if (!world.includes(nombreplaneta)) { world.push(nombreplaneta) }
+      if (!world.includes(wordName)) { world.push(wordName) }
     };
     // Como filtrar personajes origen de cada mundo
 
@@ -127,21 +127,7 @@ if (window.location.pathname === "/src/Mundo.html" || window.location.pathname =
 
 if (window.location.pathname === "/src/Temporada.html" || window.location.pathname === "/Temporada") {
   // Para conseguir los Capitulos 
-  
-    let chapters = [];
-  
-    for (let i = 0; i < personajes.length; i++) {
-      // saber si en world ya existe ese nombre del capitulos 
-      let nombrecapitulos = `<div class= "personajesS" > <div class="unoS"> <img class="imageS" src="season1.jpg"> </div> <div class="ChapterNameS"><p> Episode: ${personajes[i].episode[1]}</p></div></div>`
-  
-      if (!chapters.includes(nombrecapitulos)) { chapters.push(nombrecapitulos) }
-  
-    };
-    let seasonButtons = document.getElementById("seasonZone");
-    seasonButtons.innerHTML = chapters; 
 
-  // Otra forma de conseguir episodios 
-/*
   let results = [];
   const fetchEpisodes = () => {
     let url = `https://rickandmortyapi.com/api/episode/`;
@@ -150,19 +136,25 @@ if (window.location.pathname === "/src/Temporada.html" || window.location.pathna
         return reply.json();
       })
       .then((data) => {
-        results['results'] = data.results
-      })
-    fetchEpisodes();
-    
-    console.log("hola mundo")
-    let episodioInfo = [];
-    for (let i = 0; i < results.length; i++) {
-      episodioInfo += ` <p class= "nombres" >${results[i].name} </p>`
+        results = data.results
+        newEpisodes(results);
+      });
+  };
+  fetchEpisodes();
+
+  function newEpisodes(arrayChapters) {
+
+    let chapters = [];
+
+    for (let i = 0; i < arrayChapters.length; i++) {
+      let chaptersInfo = `<div class= "personajesS" > <div class="unoS"> <img class="imageS" src="images/season1.jpg"> </div> <div class="ChapterNameS"> <p> ${arrayChapters[i].name} </p> <p> ${arrayChapters[i].episode} </p> </div></div>`
+      if (!chapters.includes(chaptersInfo)) { chapters.push(chaptersInfo) }
     }
     let seasonButtons = document.getElementById("seasonZone");
-    seasonButtons.innerHTML = results;
-    
-  }; */
+    seasonButtons.innerHTML = chapters;
+  };
+
+
   // esta } es cierre de if de la ventana
 };
 

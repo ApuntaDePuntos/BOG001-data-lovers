@@ -44,10 +44,10 @@ Al tener esta guia clara, comenzamos con el dise;o de la pagina, para esto era v
 
 Para poder finalizar con este trabajo de esta de la siguiente manera: 
 
-***IMAGENES FINALES DE LA PAGINA!***
+***IMAGENES FINALES DE LA PAGINA ***
 
-<img src="" width="250"><img src="" width="250">
-<img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250"><img src="" width="250">
+<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/1.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/2.png" width="250">
+<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/3.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/4.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/5.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/6.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/7.png" width="250"><img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/8.png" width="250">
 
 
 ### HTML y CSS

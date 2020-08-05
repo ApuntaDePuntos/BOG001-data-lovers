@@ -37,13 +37,8 @@ para comenzar con este proyecto analizamos que tipo de personas veian la serie, 
 
   Al tener este completo pasamos a nuestra version de alta fidelidad del proyecto a crear. Definimos cada pagina, el contenido, las imagenes y la estetica exacta del proyecto, junto con la navegacion del usuario dentro de la misma. 
 
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/sketch%20Ai%201.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%202.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%203.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%204.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%205.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20%20Ai%2006.png" width="250" title="hover text">
-<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%206.png" width="250" title="hover text">
+<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/sketch%20Ai%201.png" width="250" title="hover text"> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%202.png" width="250" title="hover text"> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%203.png" width="250" title="hover text">
+<img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%204.png" width="250" title="hover text"> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%205.png" width="250" title="hover text"> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20%20Ai%2006.png" width="250" title="hover text"> <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%206.png" width="250" title="hover text">
 <img src="https://github.com/ApuntaDePuntos/BOG001-data-lovers/blob/master/ImagenesREADme/Sketch%20Ai%207.png" width="250" title="hover text">
 
 

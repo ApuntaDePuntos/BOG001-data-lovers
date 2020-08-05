@@ -4,23 +4,28 @@ export const name = () => {
   return 'name';
 };
 
-export const alive = (arrayPersonajes) => {
-  let alivePersonajesFiltros = arrayPersonajes.filter(personaje => personaje.status == "Alive");
+export const status = function alive (arrayPersonajes) {
+  let aliveCharacters = arrayPersonajes.filter(character => character.status == "Alive");
+  return (aliveCharacters);
 };
 
-export const status = () => {
-  return 'status';
-};
-
-export const worlds = function newWorlds(arrayPersonajes) {
-  let world = [];
-  for (let i = 0; i < arrayPersonajes.length; i++) {
-    let nombreplaneta = `<div class= "personajesW" <img src="mundos.jpg"> <p> ${arrayPersonajes[i].origin.name} </p> </div>`
-    if (!world.includes(nombreplaneta)) { world.push(nombreplaneta) }
+function compare(a, b) {
+  if (a.name > b.name) {
+    return 1;
   }
-};
+  if (a.name < b.name) {
+    return -1;
+  }
+  else { return 0 }
+}
 
-export const filtrar = (arrayPersonajes) => {
+export const alphabetic = function az(arrayPersonajes) {
+  let alphabeticalOrder = arrayPersonajes.sort(compare);
+  return (alphabeticalOrder);
+}
+
+/*
+export const filtrar = (arrayPersonajes, toSearch) => {
   let texto = toSearch.toLowerCase();
   for (let personaje of arrayPersonajes) {
     let nombre = personaje.name.toLowerCase();
@@ -28,15 +33,9 @@ export const filtrar = (arrayPersonajes) => {
       return (nombre)
     }
   }
-}
+};*/
+
+export const buscarPorNombre = (data, busqueda) => data.filter(personaje => personaje.name.toLowerCase().includes(busqueda.toLowerCase()))
+ 
 
 
-export const compare = function comparar(a, b) {
-  if (a.name > b.name) {
-    return 1;
-  }
-  if (a.name < b.name) {
-    return -1;
-  }
-  else { return 0 } 
-};
